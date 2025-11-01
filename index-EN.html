@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Resume Kar</title>
+    <!--meta tag-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--style-->
+    <link href="style.css" rel="stylesheet">
+    <!--bootstrap css-->
+    <link href="bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!--fontawesome css-->
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <!--favicon-->
+    <link href="photo/icon/favicon.png" rel="icon">
+    <!--swiper css-->
+    <link href="Swiperjs/swiper-bundle.min.css" rel="stylesheet">
+
+
+
+</head>
+
+
+<body dir="ltr">
+    <section class="container mt-4 mb-4">
+        <div class="row">
+
+            <!----sidebar / سایدبار---->
+            <div class="sidebar d-none d-md-block col-md-2 m-2 p-0">
+
+                <!--img / عکس-->
+
+                <!--navbar / نوار ناوبری-->
+                <div class="navbar-div mb-3">
+                    <div class="img-div mb-3">
+                        <img src="photo/user.jpg" width="100%">
+                    </div>
+
+                    <ul>
+
+                        <div class="d-flex div-menu active-menu" onclick="activePage('#about')">
+                            <i class="fa fa-user"></i>
+                            <li> About Me </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#resume')">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <li> my resume </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#service')">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <li> Services </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#project')">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                            <li> portfolio </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#blog')">
+                            <i class="fa-solid fa-file-pen"></i>
+                            <li> weblog </li>
+                        </div>
+
+                        <div class="d-flex first-child-li div-menu" onclick="activePage('#call')">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <li>  Contact Me  </li>
+                        </div>
+
+                    </ul>
+                </div>
+
+                <!----setting / تنظیمات---->
+                <div class="setting-div">
+
+                    <ul>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="d-flex collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne">
+                                <div>
+                                    <i class="fa fa-gear"></i>
+                                </div>
+                                <li> Settings </li>
+                                <i class="fa-solid fa-angle-down down-up-d"></i>
+                            </div>
+                        </div>
+
+                        <!--color / رنگ-->
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="d-flex accordion-body div-color">
+                                <li>
+                                    <p> ready colors </p>
+                                    <button class="button-color-style orange" value="orange"> </button>
+                                    <button class="button-color-style pink" value="pink"> </button>
+                                    <button class="button-color-style purple" value="purple"> </button>
+                                    <button class="button-color-style gold" value="gold"> </button>
+                                    <button class="button-color-style brown" value="brown"> </button>
+                                    <button class="button-color-style red" value="red"> </button>
+                                    <button class="button-color-style blue" value="blue"> </button>
+                                    <button class="button-color-style green" value="green"> </button>
+                                </li>
+                            </div>
+
+
+                            <div class="d-flex accordion-body div-color">
+                                <li>
+                                    <p> Color adjustment </p>
+                                    <div class="d-flex mt-2 div-custom-color">
+                                        <p> main color </p>
+                                        <input type="color" value="#FFCC00" oninput="getColorCodeOne(this.value)"
+                                            class="custom-color" id="custom-color-one-d">
+                                    </div>
+                                    <div class="d-flex mt-2 div-custom-color">
+                                        <p> secondary color </p>
+                                        <input type="color" value="#000" oninput="getColorCodeTwo(this.value)"
+                                            class="custom-color" id="custom-color-two-d">
+                                    </div>
+                                </li>
+                            </div>
+
+                            <!--font / فونت-->
+                            <div class="accordion-body div-color" style="border-bottom:none !important;">
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Title font
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><button class="dropdown-item title" value="vazir"
+                                                style="font-family: Vazir !important;">
+                                                vazir </button></li>
+                                        <li><button class="dropdown-item title" value="Estedad"
+                                                style="font-family: Estedad !important;">
+                                                Estedad </button></li>
+                                        <li><button class="dropdown-item title" value="IranSans"
+                                                style="font-family: IranSans !important;"> IranSans </button></li>
+                                        <li><button class="dropdown-item title" value="Lalezar"
+                                                style="font-family: Lalezar !important;">
+                                                Lalezar </button></li>
+                                        <li><button class="dropdown-item title" value="titr"
+                                                style="font-family: titr !important;">
+                                                titr </button></li>
+                                        <li><button class="dropdown-item title" value="yekan"
+                                                style="font-family: Yekan !important;">
+                                                yekan </button></li>
+                                        <li><button class="dropdown-item title" value="Shabnam"
+                                                style="font-family: Shabnam !important;"> Shabnam </button></li>
+                                        <li><button class="dropdown-item title" value="Sahel"
+                                                style="font-family: Sahel !important;">
+                                                Sahel </button></li>
+                                        <li><button class="dropdown-item title" value="Tanha"
+                                                style="font-family: Tanha !important;">
+                                                Tanha </button></li>
+                                        <li><button class="dropdown-item title" value="Samim"
+                                                style="font-family: Samim !important;">
+                                                Samim </button></li>
+                                        <li><button class="dropdown-item title" value="Rezvan"
+                                                style="font-family: Rezvan !important;">
+                                                Rezvan </button></li>
+                                    </ul>
+
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Text font
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><button class="dropdown-item text" value="vazir"
+                                                style="font-family: Vazir !important;">
+                                                vazir </button></li>
+                                        <li><button class="dropdown-item text" value="Estedad"
+                                                style="font-family: Estedad !important;">
+                                                Estedad </button></li>
+                                        <li><button class="dropdown-item text" value="IranSans"
+                                                style="font-family: IranSans !important;"> IranSans </button></li>
+                                        <li><button class="dropdown-item text" value="Lalezar"
+                                                style="font-family: Lalezar !important;">
+                                                Lalezar </button></li>
+                                        <li><button class="dropdown-item text" value="titr"
+                                                style="font-family: titr !important;">
+                                                titr </button></li>
+                                        <li><button class="dropdown-item text" value="yekan"
+                                                style="font-family: Yekan !important;">
+                                                yekan </button></li>
+                                        <li><button class="dropdown-item text" value="Shabnam"
+                                                style="font-family: Shabnam !important;"> Shabnam </button></li>
+                                        <li><button class="dropdown-item text" value="Sahel"
+                                                style="font-family: Sahel !important;">
+                                                Sahel </button></li>
+                                        <li><button class="dropdown-item text" value="Tanha"
+                                                style="font-family: Tanha !important;">
+                                                Tanha </button></li>
+                                        <li><button class="dropdown-item text" value="Samim"
+                                                style="font-family: Samim !important;">
+                                                Samim </button></li>
+                                        <li><button class="dropdown-item text" value="Rezvan"
+                                                style="font-family: Rezvan !important;">
+                                                Rezvan </button></li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-body div-color" style="border-bottom:none;">
+                                <button class="reset-settings"> Reset settings </button>
+                            </div>
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!--page / صفحه -->
+            <div class="page col m-2">
+
+
+                <!--header / سربرگ-->
+                <div class="header mb-3">
+                    <div class="row">
+
+                        <div class="col-12 col-lg-7 mb-3 mb-lg-0 name">
+                            <div class="row">
+                                <div class="col-8 w-auto">
+                                    <h1> Mohammad Rahmani </h1>
+                                </div>
+                                <div class="col-4 w-auto mt-2 p-0">
+                                    <span class="job"> Web programmer </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-5 network">
+                            <div class="row">
+                                <div class="col-7">
+                                    <a href="#"><i class="fa-brands fa-instagram icon-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-facebook-f icon-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter icon-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-pinterest-p icon-pinterest"></i></a>
+
+                                </div>
+                                <div class="col-5 div-resume-link Rtl-Ltr">
+                                    <div class="p-1 div-night">
+                                        <i class="fa-solid fa-sun"></i>
+                                    </div>
+
+                                    <div class="p-1 language">
+                                        <a href="index-2.html"> <i class="fa-solid fa-earth-americas RTL-E"></i> </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--about me / درباره من-->
+                <div class="about-me page-child active" id="about">
+
+                    <div class="row row-background-image">
+                        <div class="col-12 div-background-image">
+                            <img src="photo/bg-image.png" alt="#">
+
+                            <div class="div-about-me mt-4 mt-md-0">
+                                <h2> <span id="fixed-word"> </span> <span id="typing-text"> </span> </h2>
+                                <p id="typing-text-p"> Proficient in several programming languages, all graphic matters and website design with several years of useful experience.
+                                 </p>
+
+                                <a href="tel:099355555" class="call-me"> Contact Me </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+
+                        <div class="col-12 mt-4 mt-md-0">
+
+                            <div class="row mt-4">
+                                <div class="about">
+                                    <h2> About <b> Me </b> </h2>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+
+                                <div class="title-pages mb-3">
+                                    <h2 class="mt-4"> Basic <b> Information </b> </h2>
+                                </div>
+
+                                <div class="col-12 col-md-6 about">
+                                    <ul>
+                                        <li>
+                                            Date of birth: <span> 1380/10/18 </span>
+                                        </li>
+                                        <li>
+                                            Phone number: <span> 09935151515 </span>
+                                        </li>
+                                        <li>
+                                            Address: <span> Tehran, District 12 </span>
+                                        </li>
+                                        <li>
+                                            email: <span> info@example.com </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 about">
+                                    <ul>
+                                        <li>
+                                            degree of education: <span> Masters </span>
+                                        </li>
+                                        <li>
+                                            marital status: <span> Single </span>
+                                        </li>
+                                        <li>
+                                            website: <span> www.resumekar.com </span>
+                                        </li>
+                                        <li>
+                                            Condition: <span> ready </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="row mt-4">
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                <i class="fa-solid fa-list-check"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 158 </span>
+                                            </div>
+                                        </div>
+                                        <p> Completed projects </p>
+                                    </div>
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                </i><i class="fa-solid fa-user-group"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 125 </span>
+                                            </div>
+                                        </div>
+                                        <p> Satisfied customers </p>
+                                    </div>
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                <i class="fa-solid fa-medal"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 56 </span>
+                                            </div>
+                                        </div>
+                                        <p> Awards received </p>
+                                    </div>
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                <i class="fa-solid fa-sitemap"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 28 </span>
+                                            </div>
+                                        </div>
+                                        <p> Name domains </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--my resume / رزومه من-->
+                <div class="my-resume page-child" id="resume">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-6">
+                            <h2> Educational <b>records</b> </h2>
+
+                            <div class="div-resume mt-3">
+                                <h3> Bachelor Degree </h3>
+                                <span> 1400 - 1402 </span>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> Programming degree </h3>
+                                <span> 1400 - 1402 </span>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> Honorary degree </h3>
+                                <span> 1400 - 1402 </span>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-3 mt-md-0">
+                            <h2> work <b>experience</b> </h2>
+
+                            <div class="div-resume mt-3">
+                                <h3> Programming </h3>
+                                <span> 1400 - 1402 </span>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> SEO </h3>
+                                <span> 1400 - 1402 </span>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> Graphic Design </h3>
+                                <span> 1400 - 1402 </span>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-5">
+
+                        <div class="col-12 col-md-6 Skill">
+                            <h2> Design <b>skills</b> </h2>
+
+                            <h6 class="mt-3"> Web design </h6>
+                            <span class="Rtl-Ltr"> 90% </span>
+                            <div class="div-meter">
+                                <div style="width: 90%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> Graphic Design </h6>
+                            <span class="Rtl-Ltr"> 95% </span>
+                            <div class="div-meter">
+                                <div style="width: 95%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> Print design </h6>
+                            <span class="Rtl-Ltr"> 80% </span>
+                            <div class="div-meter">
+                                <div style="width: 80%;"> </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 Skill mt-5 mt-md-0">
+                            <h2> Programming <b>skills</b> </h2>
+
+                            <h6 class="mt-3"> HTML - CSS </h6>
+                            <span class="Rtl-Ltr"> 95% </span>
+                            <div class="div-meter">
+                                <div style="width: 95%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> javaScript </h6>
+                            <span class="Rtl-Ltr"> 90% </span>
+                            <div class="div-meter">
+                                <div style="width: 90%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> PHP </h6>
+                            <span class="Rtl-Ltr"> 85% </span>
+                            <div class="div-meter">
+                                <div style="width: 85%;"> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--service / خدمات-->
+                <div class="service page-child" id="service">
+
+                    <div class="row">
+
+                        <h2> my <b>service</b> </h2>
+                        <div class="col-12 col-md-6">
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-1.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> Programming </h3>
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-3.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> Web design </h3>
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6">
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-4.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> Graphic Design </h3>
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-2.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> Photography </h3>
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row Customer container mt-5 mw-100">
+                        <h2> my <b>customers</b> </h2>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/%c3%99%c2%85%c3%98%c2%b4%c3%98%c2%aa%c3%98%c2%b1%c3%9b%c2%8c%c3%98%c2%a7%c3%99%c2%86/client_1.html" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/%c3%99%c2%85%c3%98%c2%b4%c3%98%c2%aa%c3%98%c2%b1%c3%9b%c2%8c%c3%98%c2%a7%c3%99%c2%86/client_5.html" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/%c3%99%c2%85%c3%98%c2%b4%c3%98%c2%aa%c3%98%c2%b1%c3%9b%c2%8c%c3%98%c2%a7%c3%99%c2%86/client_3.html" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/%c3%99%c2%85%c3%98%c2%b4%c3%98%c2%aa%c3%98%c2%b1%c3%9b%c2%8c%c3%98%c2%a7%c3%99%c2%86/client_4.html" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/%c3%99%c2%85%c3%98%c2%b4%c3%98%c2%aa%c3%98%c2%b1%c3%9b%c2%8c%c3%98%c2%a7%c3%99%c2%86/client_2.html" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/%c3%99%c2%85%c3%98%c2%b4%c3%98%c2%aa%c3%98%c2%b1%c3%9b%c2%8c%c3%98%c2%a7%c3%99%c2%86/client_6.html" alt="logo">
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-5">
+                        <h2> Customer <b>opinion</b> </h2>
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user-1.jpg">
+                                    <span> Mohammad Azadi </span>
+                                </div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user-2.jpg">
+                                    <span> Amirhossein Sadeghi </span>
+                                </div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user-3.jpg">
+                                    <span> Reza Rashidi </span>
+                                </div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user-4.jpg">
+                                    <span> Saeed Naqibi </span>
+                                </div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--project / نمونه کارها-->
+                <div class="project page-child" id="project">
+
+                    <h2> My <b>portfolio</b> </h2>
+                    <p> Here we are going to review several of my works... </p>
+                    <div class="row mt-4 mw-100 m-auto">
+
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-programmer">
+                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Programming </span>
+                            <p> project name : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-programmer">
+                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Programming </span>
+                            <p> project name : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-programmer">
+                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Programming </span>
+                            <p> project name : ... </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mw-100 m-auto">
+
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-site">
+                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Web design </span>
+                            <p> project name : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-site">
+                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Web design </span>
+                            <p> project name : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-site">
+                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Web design </span>
+                            <p> project name : ... </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mw-100 m-auto">
+
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-graphic">
+                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Graphic Design </span>
+                            <p> project name : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-graphic">
+                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Graphic Design </span>
+                            <p> project name : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-graphic">
+                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> Graphic Design </span>
+                            <p> project name : ... </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal-programmer -->
+                    <div class="modal fade" id="exampleModal-programmer" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">project name : ...</h1>
+                                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+
+                                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                                class="swiper mySwiper2-project">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                            </div>
+                                            <div thumbsSlider="" class="swiper mySwiper-project">
+                                                <div class="swiper-wrapper mt-2">
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/programmer/programmer-1.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <h3 class="mt-3 mt-md-0"> Project <b>description</b> </h3>
+                                            <ul>
+                                                <li class="mt-4"> Author Name: <span> Mohammad Rahmani </span> </li>
+                                                <li class="mt-3"> Project start date: <span> 1402/5/28 </span> </li>
+                                                <li class="mt-3"> Project completion date: <span> 1402/5/28 </span>
+                                                </li>
+                                                <li class="mt-3"> Project link: <span> <a href="#"> www.site.com </a>
+                                                    </span> </li>
+                                                <li class="mt-3"> Further Details: <span> Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo consequat. Duis aute irure dolor in reprehenderit in
+                                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                                        qui officia deserunt mollit anim id est laborum.
+                                                        <br>
+                                                        Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo consequat. </span> </li>
+                                                <button class="mt-5"> contact us </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">close</button>
+                                    <a href="#"><button type="button">share</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal-site -->
+                    <div class="modal fade" id="exampleModal-site" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">project name : ...</h1>
+                                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+
+                                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                                class="swiper mySwiper2-project">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                            </div>
+                                            <div thumbsSlider="" class="swiper mySwiper-project">
+                                                <div class="swiper-wrapper mt-2">
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/design%20website/design-website.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <h3 class="mt-3 mt-md-0"> Project <b>description</b> </h3>
+                                            <ul>
+                                                <li class="mt-4"> Name of the designer: <span> Mohammad Rahmani </span>
+                                                </li>
+                                                <li class="mt-3"> Project start date: <span> 1402/5/28 </span> </li>
+                                                <li class="mt-3"> Project completion date: <span> 1402/5/28 </span>
+                                                </li>
+                                                <li class="mt-3"> Project link: <span> <a href="#"> www.site.com </a>
+                                                    </span> </li>
+                                                <li class="mt-3"> Further Details: <span> Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo consequat. Duis aute irure dolor in reprehenderit in
+                                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                                        qui officia deserunt mollit anim id est laborum.
+                                                        <br>
+                                                        Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo consequat. </span> </li>
+                                                <button class="mt-5"> contact us </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">close</button>
+                                    <a href="#"><button type="button">share</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal-graphic -->
+                    <div class="modal fade" id="exampleModal-graphic" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">project name : ...</h1>
+                                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+
+                                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                                class="swiper mySwiper2-project">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                            </div>
+                                            <div thumbsSlider="" class="swiper mySwiper-project">
+                                                <div class="swiper-wrapper mt-2">
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="photo/progect/graphic/graphic.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <h3 class="mt-3 mt-md-0"> Project <b>description</b> </h3>
+                                            <ul>
+                                                <li class="mt-4"> Name of the designer: <span> Mohammad Rahmani </span>
+                                                </li>
+                                                <li class="mt-3"> Project start date: <span> 1402/4/28 </span> </li>
+                                                <li class="mt-3"> Project completion date: <span> 1402/5/28 </span>
+                                                </li>
+                                                <li class="mt-3"> Project link: <span> <a href="#"> www.site.com </a>
+                                                    </span> </li>
+                                                <li class="mt-3"> Further Details: <span> Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo consequat. Duis aute irure dolor in reprehenderit in
+                                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                                        qui officia deserunt mollit anim id est laborum.
+                                                        <br>
+                                                        Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo consequat. </span> </li>
+                                                <button class="mt-5"> contact us </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">close</button>
+                                    <a href="#"><button type="button">share</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!--blog / مقالات-->
+                <div class="blog page-child" id="blog">
+
+                    <h2> Site <b>articles</b> </h2>
+                    <p> For more information and information about programming, refer to the articles on our site...
+                    </p>
+                    <div class="row mt-4 mw-100 m-auto">
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog-EN.html"> <img src="photo/blog/blog-1.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> December 28 </span>
+                                <div>
+                                    <a href="blog-EN.html">
+                                        <h3> What is SEO? </h3>
+                                    </a>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. </p>
+                                    <span> No views </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog-EN.html"> <img src="photo/blog/blog-1.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> December 28 </span>
+                                <div>
+                                    <a href="blog-EN.html">
+                                        <h3> Types of artificial intelligence </h3>
+                                    </a>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. </p>
+                                    <span> No views </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog-EN.html"> <img src="photo/blog/blog-1.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> December 28 </span>
+                                <div>
+                                    <a href="blog-EN.html">
+                                        <h3> How long does SEO take? </h3>
+                                    </a>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. </p>
+                                    <span> No views </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mw-100 m-auto">
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog-EN.html"> <img src="photo/blog/blog-2.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> December 28 </span>
+                                <div>
+                                    <a href="blog-EN.html">
+                                        <h3> All about content marketing </h3>
+                                    </a>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. </p>
+                                    <span> No views </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog-EN.html"> <img src="photo/blog/blog-2.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> December 28 </span>
+                                <div>
+                                    <a href="blog-EN.html">
+                                        <h3> Introducing Photoshop widgets </h3>
+                                    </a>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. </p>
+                                    <span> No views </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog-EN.html"> <img src="photo/blog/blog-2.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> December 28 </span>
+                                <div>
+                                    <a href="blog-EN.html">
+                                        <h3> Corel installation tutorial </h3>
+                                    </a>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. </p>
+                                    <span> No views </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- call / تماس با ما -->
+                <div class="call page-child" id="call">
+                    <div class="row">
+                        <h2> Contact <b> Me </b> </h2>
+
+                        <div class="col-12 col-md-6 div-call-form mt-2">
+                            <form>
+                                <input type="text" placeholder="first name and last name">
+                                <br>
+                                <input type="number" placeholder="Phone number">
+                                <br>
+                                <textarea> greetings... </textarea>
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-2 div-call-list">
+                            <ul>
+                                <li>
+                                    Phone number: <span> 09935151515 </span>
+                                </li>
+                                <li>
+                                    Address: <span> Tehran, District 12 </span>
+                                </li>
+                                <li>
+                                    email: <span> info@example.com </span>
+                                </li>
+                                <li>
+                                    website: <span> www.myresume.com </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2 div-blog-submit">
+                        <div class="col">
+                            <button type="submit"> send message </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!----sidebar-mobile / سایدبار---->
+    <div class="sidebar sidebar-mobile p-0 d-md-none">
+        <div class="div-sidebar-mobile">
+
+            <!--img / عکس-->
+            <div class="img-div mb-3">
+                <img src="photo/user.jpg" width="100%">
+            </div>
+
+            <!--navbar / نوار ناوبری-->
+            <div class="navbar-div mb-3">
+                <ul>
+
+                    <div class="d-flex div-menu active-menu" onclick="activePage('#about')">
+                        <i class="fa fa-user"></i>
+                        <li> About Me </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#resume')">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <li> my resume </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#service')">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <li> Services </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#project')">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                        <li> portfolio </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#blog')">
+                        <i class="fa-solid fa-file-pen"></i>
+                        <li> weblog </li>
+                    </div>
+
+                    <div class="d-flex first-child-li div-menu" onclick="activePage('#call')">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <li> Contact Me </li>
+                    </div>
+
+                </ul>
+            </div>
+
+            <!----setting / تنظیمات---->
+            <div class="setting-div">
+
+                <ul>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="d-flex collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne">
+                            <div>
+                                <i class="fa fa-gear"></i>
+                            </div>
+                            <li> Settings </li>
+                            <i class="fa-solid fa-angle-down down-up-d"></i>
+                        </div>
+                    </div>
+
+                    <!--color / رنگ-->
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="d-flex accordion-body div-color">
+                            <li>
+                                <p> Color </p>
+                                <button class="button-color-style orange" value="orange"> </button>
+                                <button class="button-color-style pink" value="pink"> </button>
+                                <button class="button-color-style purple" value="purple"> </button>
+                                <button class="button-color-style gold" value="gold"> </button>
+                                <button class="button-color-style brown" value="brown"> </button>
+                                <button class="button-color-style red" value="red"> </button>
+                                <button class="button-color-style blue" value="blue"> </button>
+                                <button class="button-color-style green" value="green"> </button>
+                            </li>
+                        </div>
+
+                        <div class="d-flex accordion-body div-color">
+                            <li>
+                                <p> Color adjustment </p>
+                                <div class="d-flex mt-2 div-custom-color">
+                                    <p> main color </p>
+                                    <input type="color" oninput="getColorCodeOne(this.value)"
+                                        class="custom-color" id="custom-color-one-m">
+                                </div>
+                                <div class="d-flex mt-2 div-custom-color">
+                                    <p> secondary color </p>
+                                    <input type="color" oninput="getColorCodeTwo(this.value)"
+                                        class="custom-color" id="custom-color-two-m">
+                                </div>
+                            </li>
+                        </div>
+
+                        <!--font / فونت-->
+                        <div class="accordion-body div-color" style="border-bottom:none !important;">
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Title font
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><button class="dropdown-item title" value="vazir"
+                                            style="font-family: Vazir !important;">
+                                            vazir </button></li>
+                                    <li><button class="dropdown-item title" value="Estedad"
+                                            style="font-family: Estedad !important;">
+                                            Estedad </button></li>
+                                    <li><button class="dropdown-item title" value="IranSans"
+                                            style="font-family: IranSans !important;"> IranSans </button></li>
+                                    <li><button class="dropdown-item title" value="Lalezar"
+                                            style="font-family: Lalezar !important;">
+                                            Lalezar </button></li>
+                                    <li><button class="dropdown-item title" value="titr"
+                                            style="font-family: titr !important;">
+                                            titr </button></li>
+                                    <li><button class="dropdown-item title" value="yekan"
+                                            style="font-family: Yekan !important;">
+                                            yekan </button></li>
+                                    <li><button class="dropdown-item title" value="Shabnam"
+                                            style="font-family: Shabnam !important;"> Shabnam </button></li>
+                                    <li><button class="dropdown-item title" value="Sahel"
+                                            style="font-family: Sahel !important;">
+                                            Sahel </button></li>
+                                    <li><button class="dropdown-item title" value="Tanha"
+                                            style="font-family: Tanha !important;">
+                                            Tanha </button></li>
+                                    <li><button class="dropdown-item title" value="Samim"
+                                            style="font-family: Samim !important;">
+                                            Samim </button></li>
+                                    <li><button class="dropdown-item title" value="Rezvan"
+                                            style="font-family: Rezvan !important;">
+                                            Rezvan </button></li>
+                                </ul>
+
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text font
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><button class="dropdown-item text" value="vazir"
+                                            style="font-family: Vazir !important;">
+                                            vazir </button></li>
+                                    <li><button class="dropdown-item text" value="Estedad"
+                                            style="font-family: Estedad !important;">
+                                            Estedad </button></li>
+                                    <li><button class="dropdown-item text" value="IranSans"
+                                            style="font-family: IranSans !important;"> IranSans </button></li>
+                                    <li><button class="dropdown-item text" value="Lalezar"
+                                            style="font-family: Lalezar !important;">
+                                            Lalezar </button></li>
+                                    <li><button class="dropdown-item text" value="titr"
+                                            style="font-family: titr !important;">
+                                            titr </button></li>
+                                    <li><button class="dropdown-item text" value="yekan"
+                                            style="font-family: Yekan !important;">
+                                            yekan </button></li>
+                                    <li><button class="dropdown-item text" value="Shabnam"
+                                            style="font-family: Shabnam !important;"> Shabnam </button></li>
+                                    <li><button class="dropdown-item text" value="Sahel"
+                                            style="font-family: Sahel !important;">
+                                            Sahel </button></li>
+                                    <li><button class="dropdown-item text" value="Tanha"
+                                            style="font-family: Tanha !important;">
+                                            Tanha </button></li>
+                                    <li><button class="dropdown-item text" value="Samim"
+                                            style="font-family: Samim !important;">
+                                            Samim </button></li>
+                                    <li><button class="dropdown-item text" value="Rezvan"
+                                            style="font-family: Rezvan !important;">
+                                            Rezvan </button></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                            <div class="accordion-body div-color" style="border-bottom:none;">
+                                <button class="reset-settings"> Reset settings </button>
+                            </div>
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+         <div class="button-sidebar-mobile button-sidebar-mobile-EN">
+            <a href="index-2.html"> <div class="language d-flex pb-2"> <i class="fa-solid fa-earth-americas RTL-E"></i> </div> </a>
+            
+            <a>
+              <div class="button-sidebar"> <i class="fa-solid fa-angles-left"></i> 
+                     <div class="icon-sidebar-mobile button-sidebar"></div>
+              </div>
+             </a>
+             
+            <a> <div class="div-night d-flex pt-2"> <i class="fa-solid fa-sun"></i> </div> </a>
+ 
+         </div>
+ 
+ 
+ 
+    </div>
+
+
+
+</body>
+
+<!--jquery-->
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<!--bootstrap js-->
+<script src="bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+<!--fontawesome js-->
+<script src="fontawesome/js/all.min.js"></script>
+<!--script-->
+<script src="script.js"></script>
+<!--swiper js-->
+<script src="Swiperjs/swiper-bundle.min.js"></script>
+
+
+<script>
+    var swiper = document.querySelectorAll(".mySwiper-project").forEach(function (element) {
+        new Swiper(element, {
+            spaceBetween: 5,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+    });
+
+    var swiper2 = document.querySelectorAll(".mySwiper2-project").forEach(function (element) {
+        new Swiper(element, {
+            spaceBetween: 5,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    });
+
+</script>
+</html>
